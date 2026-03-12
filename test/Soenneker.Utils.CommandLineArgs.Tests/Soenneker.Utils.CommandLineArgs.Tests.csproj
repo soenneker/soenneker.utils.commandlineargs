@@ -27,7 +27,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Soenneker.Utils.CommandLineArgs.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.Utils.CommandLineArgs\Soenneker.Utils.CommandLineArgs.csproj" />
     </ItemGroup>
 
     <ItemGroup>
