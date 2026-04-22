@@ -1,20 +1,19 @@
 using Soenneker.Utils.CommandLineArgs.Abstract;
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Utils.CommandLineArgs.Tests;
 
-[Collection("Collection")]
-public sealed class CommandLineArgsUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class CommandLineArgsUtilTests : HostedUnitTest
 {
     private readonly ICommandLineArgsUtil _util;
 
-    public CommandLineArgsUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public CommandLineArgsUtilTests(Host host) : base(host)
     {
         _util = Resolve<ICommandLineArgsUtil>(true);
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
