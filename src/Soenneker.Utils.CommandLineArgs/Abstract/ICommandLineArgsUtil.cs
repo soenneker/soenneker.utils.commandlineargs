@@ -77,6 +77,7 @@ public interface ICommandLineArgsUtil
     /// This method uses <see cref="bool.TryParse(string, out bool)"/> on the underlying string value.
     /// Presence-only flags (e.g., <c>--verbose</c>) should be checked via <see cref="Contains(string)"/>.
     /// </remarks>
+    /// <returns>Attempts to retrieve a <see cref="bool"/> value associated with the specified key.</returns>
     bool TryGetBool(string key, out bool value);
 
     /// <summary>
@@ -85,5 +86,6 @@ public interface ICommandLineArgsUtil
     /// <remarks>
     /// This method uses <see cref="int.TryParse(string, out int)"/> on the underlying string value.
     /// </remarks>
+    /// <returns>Attempts to retrieve an <see cref="int"/> value associated with the specified key.</returns>
     bool TryGetInt(string key, out int value);
 }

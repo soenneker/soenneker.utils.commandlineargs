@@ -12,6 +12,7 @@ public static class CommandLineArgsUtilRegistrar
     /// <summary>
     /// Adds <see cref="ICommandLineArgsUtil"/> as a singleton service. <para/>
     /// </summary>
+    /// <returns>Adds <see cref="ICommandLineArgsUtil"/> as a singleton service. <para/>.</returns>
     public static IServiceCollection AddCommandLineArgsUtilAsSingleton(this IServiceCollection services)
     {
         services.TryAddSingleton<ICommandLineArgsUtil, CommandLineArgsUtil>();
@@ -22,6 +23,7 @@ public static class CommandLineArgsUtilRegistrar
     /// <summary>
     /// Adds <see cref="ICommandLineArgsUtil"/> as a scoped service. <para/>
     /// </summary>
+    /// <returns>Adds <see cref="ICommandLineArgsUtil"/> as a scoped service. <para/>.</returns>
     public static IServiceCollection AddCommandLineArgsUtilAsScoped(this IServiceCollection services)
     {
         services.TryAddScoped<ICommandLineArgsUtil, CommandLineArgsUtil>();
